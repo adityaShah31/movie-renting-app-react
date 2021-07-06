@@ -9,8 +9,9 @@ const HomePage = (props) => {
     <div>
       <Header />
       <HeroCarousel movies={props.bannerMovies} />
-      <FeaturedVideos movies={props.bannerMovies} title='Featured Movies' />
-      <FeaturedVideos movies={props.bannerMovies} title='Featured TV Shows' />
+      <FeaturedVideos featuredVideos={props.bannerMovies} title='Featured Movies' />
+      <FeaturedVideos featuredVideos={props.bannerMovies} title='Featured TV Shows' />
+      <Footer />
     </div>
   );
 };
