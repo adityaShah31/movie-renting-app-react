@@ -1,4 +1,5 @@
 import React from 'react';
+import VideoCard from './VideoCard';
 
 const FeaturedVideos = (props) => {
   return (
@@ -11,12 +12,7 @@ const FeaturedVideos = (props) => {
       </div>
       <div className='container d-flex mx-0'>
         {props.featuredVideos.map((video) => (
-          <div className='card featuredVideoCard me-2'>
-            <img className='cardImgPoster d-block' src='{video.imgPoster}' alt='' />
-            <div className='posterOverlay'>
-              <p className='p-3'>{video.title}</p>
-            </div>
-          </div>
+          <VideoCard video={video} />
         ))}
       </div>
     </div>
