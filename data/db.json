@@ -14,7 +14,9 @@
         "buy":"13.99",
         "IMDbRating":"6.70",
         "actors":["Yvonne Strahovski", "Chris Pratt", "J.K. Simmons"],
-        "director": "Chris McKay"
+        "director": "Chris McKay",
+        "inDemand": true,
+        "featured": false
     },
     {
         "id":1,
@@ -30,7 +32,9 @@
         "buy":"11.99",
         "IMDbRating":"5.50",
         "actors":["Vin Diesel", "John Cena", "Charlize Theron", "Kurt Russell"],
-        "director": "Justin Lin"
+        "director": "Justin Lin",
+        "inDemand": true,
+        "featured": false
     },
     {
         "id":2,
@@ -46,7 +50,9 @@
         "buy":"10.99",
         "IMDbRating":"6.40",
         "actors":["Patrick Wilson", "Vera Farmiga"],
-        "director":"Michael Chaves"
+        "director":"Michael Chaves",
+        "inDemand": true,
+        "featured": false
     },
     {
         "id":3,
@@ -62,7 +68,9 @@
         "buy":"11.49",
         "IMDbRating":"7.40",
         "actors":["Bob Odenkirk", "Connie Nielsen", "Christopher Lloyd"],
-        "director":"Ilya Naishuller"
+        "director":"Ilya Naishuller",
+        "inDemand": true,
+        "featured": false
     },
     {
         "id":4,
@@ -78,7 +86,9 @@
         "buy":"7.99",
         "IMDbRating":"6.20",
         "actors":["Tadanobu Asano", "Hiroyuki Sanada", "Josh Lawson"],
-        "director":"Simon McQuoid"
+        "director":"Simon McQuoid",
+        "inDemand": true,
+        "featured": false
     },
     {
         "id":5,
@@ -94,7 +104,9 @@
         "buy":"6.99",
         "IMDbRating":"6.40",
         "actors":["Demián Bichir", "Rebecca Hall", "Kyle Chandler", "Shun Oguri", "Alexander Skarsgård"],
-        "director":"Adam Wingard"
+        "director":"Adam Wingard",
+        "inDemand": true,
+        "featured": false
     },
     {
         "id":6,
@@ -110,7 +122,9 @@
         "buy":"19.99",
         "IMDbRating":"8.10",
         "actors":["Ben Affleck", "Henry Cavill", "Ezra Miller", "Gal Gadot", "Jason Momoa", "Ray Fisher"],
-        "director":"Zack Snyder"
+        "director":"Zack Snyder",
+        "inDemand": false,
+        "featured": true
     },
     {
         "id":7,
@@ -126,7 +140,9 @@
         "buy":"9.99",
         "IMDbRating":"7.40",
         "actors":["Sandra Oh", "Awkwafina", "Gemma Chan", "Daniel Dae Kim", "Alan Tudyk", "Benedict Wong", "Lucille Soong"],
-        "director":"Don Hall & others"
+        "director":"Don Hall & others",
+        "inDemand": false,
+        "featured": true
     },
     {
         "id":8,
@@ -142,7 +158,9 @@
         "buy":"14.99",
         "IMDbRating":"5.80",
         "actors":["Matthias Schweighöfer", "Hiroyuki Sanada", "Garret Dillahunt", "Ana De La Reguera", "Dave Bautista", "Omari Hardwick"],
-        "director":"Zack Snyder"
+        "director":"Zack Snyder",
+        "inDemand": false,
+        "featured": true
     },
     {
         "id":9,
@@ -158,7 +176,9 @@
         "buy":"10.99",
         "IMDbRating":"9.20",
         "actors":["Al Pacino", "Marlon Brando", "James Caan"],
-        "director":"Francis Ford Coppola"
+        "director":"Francis Ford Coppola",
+        "inDemand": false,
+        "featured": true
     },
     {
         "id":10,
@@ -174,7 +194,9 @@
         "buy":"16.99",
         "IMDbRating":"8.10",
         "actors":["Ralph Fiennes", "Mathieu Amalric", "F Murray Abraham"],
-        "director":"Wes Anderson"
+        "director":"Wes Anderson",
+        "inDemand": false,
+        "featured": true
     },
     {
         "id":11,
@@ -190,7 +212,9 @@
         "buy":"18.49",
         "IMDbRating":"7.80",
         "actors":["Kara Hayward", "Bruce Willis", "Jared Gilman", "Edward Norton"],
-        "director":"Wes Anderson"
+        "director":"Wes Anderson",
+        "inDemand": false,
+        "featured": true
     },
     {
         "id":12,
@@ -206,7 +230,9 @@
         "buy":"15.49",
         "IMDbRating":"7.80",
         "actors":["Steve Carell", "Toni Collette", "Greg Kinnear", "Alan Arkin", "Abigail Breslin"],
-        "director":"Valerie Faris & Jonathan Dayton"
+        "director":"Valerie Faris & Jonathan Dayton",
+        "inDemand": false,
+        "featured": true
     },
     {
         "id":13,
@@ -222,7 +248,9 @@
         "buy":"12.99",
         "IMDbRating":"8.00",
         "actors":["Joaquin Phoenix", "Scarlett Johansson", "Amy Adams"],
-        "director":"Spike Jonze"
+        "director":"Spike Jonze",
+        "inDemand": false,
+        "featured": true
     },
     {
         "id":14,
@@ -238,7 +266,9 @@
         "buy":"12.99",
         "IMDbRating":"8.70",
         "actors":["Harrison Ford", "Mark Hamill", "Carrie Fisher"],
-        "director":"Irvin Kershner"
+        "director":"Irvin Kershner",
+        "inDemand": false,
+        "featured": true
     },
     {
         "id":15,
@@ -254,7 +284,9 @@
         "buy":"19.49",
         "IMDbRating":"8.80",
         "actors":["Robin Wright", "Tom Hanks", "Gary Sinise"],
-        "director":"Robert Zemeckis"
+        "director":"Robert Zemeckis",
+        "inDemand": false,
+        "featured": true
     },
     {
         "id":16,
@@ -270,7 +302,9 @@
         "buy":"24.99",
         "IMDbRating":"8.80",
         "actors":[ "Uma Thurman", "Vivica A Fox", "David Carradine", "Michael Parks", "Michael Bowen"],
-        "director":"Quentin Tarantino"
+        "director":"Quentin Tarantino",
+        "inDemand": false,
+        "featured": true
     },
     {
         "id":17,
@@ -286,7 +320,9 @@
         "buy":"21.49",
         "IMDbRating":"8.90",
         "actors":["Samuel L. Jackson", "John Travolta", "Uma Thurman"],
-        "director":"Quentin Tarantino"
+        "director":"Quentin Tarantino",
+        "inDemand": false,
+        "featured": true
     },
     {
         "id":18,
@@ -302,7 +338,9 @@
         "buy":"14.99",
         "IMDbRating":"7.60",
         "actors":["Gwyneth Paltrow", "Gene Hackman", "Anjelica Huston"],
-        "director":"Wes Anderson"
+        "director":"Wes Anderson",
+        "inDemand": false,
+        "featured": true
     },
     {
         "id":19,
@@ -318,7 +356,9 @@
         "buy":"10.99",
         "IMDbRating":"8.00",
         "actors":["Eva Green", "Judi Dench", "Daniel Craig"],
-        "director":"Martin Campbell"
+        "director":"Martin Campbell",
+        "inDemand": false,
+        "featured": false
     },
 
     {
@@ -335,7 +375,9 @@
         "buy":"16.99",
         "IMDbRating":"8.90",
         "actors":["Owen Wilson", "Richard E. Grant", "Gugu Mbatha Raw", "Tom Hiddleston", "Sophia Di Martino"],
-        "director":"Various"
+        "director":"Various",
+        "inDemand": false,
+        "featured": true
     }
     ]
 }

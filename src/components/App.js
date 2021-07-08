@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import fs from 'fs';
 
 import HomePage from '../pages/HomePage';
 import ListingPage from '../pages/ListingPage';
@@ -13,7 +14,7 @@ function App() {
 
   useEffect(() => {
     //Call from fake API(s)
-    fetch('http://localhost:3001/videos')
+    fetch('http://localhost:8080/videos')
       .then((res) => res.json())
       .then((json) => setVideos(json))
       .catch((err) => console.log(err));

@@ -5,15 +5,7 @@ import videoContext from '../context/VideoContext';
 const HeroCarousel = () => {
   const { videos, setVideos } = useContext(videoContext);
 
-  const featuredVideoIndices = [];
-  //Fill array with 5 random indices of movies and tv-shows
-  while (featuredVideoIndices.length < 5) {
-    var r = Math.floor(Math.random() * videos.length) + 1;
-    if (featuredVideoIndices.indexOf(r) === -1) featuredVideoIndices.push(r);
-  }
-
-  console.log(videos.filter((video, index) => featuredVideoIndices.includes(index)));
-  let inDemandVideos = videos.filter((video, index) => featuredVideoIndices.includes(index));
+  let inDemandVideos = videos.filter((video) => video.inDemand);
 
   return (
     <div className='px-0 mx-0 container hero-carousel-container'>
