@@ -4,13 +4,13 @@ import Footer from '../components/Footer';
 import HeroCarousel from '../components/HeroCarousel';
 import FeaturedVideos from '../components/FeaturedVideos';
 
-const HomePage = (props) => {
+const HomePage = () => {
   return (
     <div>
       <Header />
-      <HeroCarousel movies={props.bannerMovies} />
-      <FeaturedVideos featuredVideos={props.bannerMovies} title='Featured Movies' />
-      <FeaturedVideos featuredVideos={props.bannerMovies} title='Featured TV Shows' />
+      <HeroCarousel />
+      <FeaturedVideos title='Featured Movies' />
+      <FeaturedVideos title='Featured TV Shows' />
       <Footer />
     </div>
   );

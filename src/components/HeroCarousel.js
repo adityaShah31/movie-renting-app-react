@@ -1,22 +1,37 @@
 import React from 'react';
+import { useContext } from 'react';
+import videoContext from '../context/VideoContext';
 
-const HeroCarousel = (props) => {
-  console.log(props.movies);
+const HeroCarousel = () => {
+  const { videos, setVideos } = useContext(videoContext);
+
+  const featuredVideoIndices = [];
+  //Fill array with 5 random indices of movies and tv-shows
+  while (featuredVideoIndices.length < 5) {
+    var r = Math.floor(Math.random() * videos.length) + 1;
+    if (featuredVideoIndices.indexOf(r) === -1) featuredVideoIndices.push(r);
+  }
+
+  console.log(videos.filter((video, index) => featuredVideoIndices.includes(index)));
+  let inDemandVideos = videos.filter((video, index) => featuredVideoIndices.includes(index));
+
   return (
     <div className='px-0 mx-0 container hero-carousel-container'>
       <div id='heroCarousel' className='carousel slide' data-bs-ride='carousel'>
-        <div class='carousel-indicators'>
-          {props.movies.map((movie, index) => (
-            <button type='button' data-bs-target='#heroCarousel' data-bs-slide-to={`${index}`} className={index === 0 ? 'active' : ''} aria-label={`Slide ${index + 1}`}></button>
+        <div className='carousel-indicators'>
+          {inDemandVideos.map((video, index) => (
+            <button key={video.id} type='button' data-bs-target='#heroCarousel' data-bs-slide-to={`${index}`} className={index === 0 ? 'active' : ''} aria-label={`Slide ${index + 1}`}></button>
           ))}
         </div>
         <div className='carousel-inner'>
-          {props.movies.map((movie, index) => (
-            <div className={index === 0 ? 'carousel-item active' : 'carousel-item'} data-bs-interval='5000'>
-              <img src={`${movie.imgBanner}`} class='d-block w-100' alt='...' />
-              <div className='carousel-caption d-none d-md-block'>
-                <h1 className='mb-3 display-5'>{movie.title}</h1>
-                <p className='carousel-caption-mv-desc'>{movie.description}</p>
+          {inDemandVideos.map((video, index) => (
+            <div key={video.id} className={index === 0 ? 'carousel-item active' : 'carousel-item'} data-bs-interval='5000'>
+              <div className='bannerImgContainer'>
+                <img src={`${video.banner}`} className='d-block' alt='...' />
+              </div>
+              <div className='carousel-caption d-none d-md-block px-5'>
+                <h1 className='mb-3 display-5'>{video.title}</h1>
+                <p className='carousel-caption-mv-desc'>{video.synopsis}</p>
               </div>
             </div>
           ))}

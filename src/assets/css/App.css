@@ -78,19 +78,30 @@ nav {
   z-index: -1
 }
 
-.carousel-inner, .hero-carousel-container {
-  height: 70vh;
+.bannerImgContainer {
+  height: 75vh;
+}
+
+.bannerImgContainer img {
+  width: 100%;
+  height: auto;
 }
 
 .carousel-caption {
   position: absolute;
-  top: 37%;
-  left: 5%;
+  top: 57%;
+  left: 0%;
+  /* padding-left: 30px;
+  padding-right: 30px; */
+
 }
 
 .carousel-caption h1 {
   font-weight: 500;
+  /* color: white; */
 }
+
+
 .carousel-caption-mv-desc {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -130,7 +141,7 @@ nav {
 }
 
 .featuredVideoCard:hover {
-  transform: translateY(-10px);
+  transform: scale(1.05);
 }
 
 .featuredVideoCard:hover .posterOverlay {
@@ -149,4 +160,3 @@ nav {
   transform: translate(-50%, -50%);
 }
 /*  */
-

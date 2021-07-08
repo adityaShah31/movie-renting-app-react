@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const footerLinks = [
@@ -42,17 +43,17 @@ const Footer = () => {
   return (
     <footer>
       <div className='footer-logo mb-4 ms-3'>
-        <img src='/images/logo.png' alt='' srcset='' />
+        <img src='/images/logo.png' alt='' srcSet='' />
       </div>
       <div className='container grid-container d-grid mx-1'>
         <div className='row'>
           {footerLinks.map((section) => (
-            <div className='col-6 col-md-3'>
+            <div key={section.heading} className='col-6 col-md-3'>
               <h5 className='mb-3 mt-2'>{section.heading}</h5>
               {section.links.map((link) => (
-                <a href={link.href} className='d-block mb-2'>
+                <Link key={link.title} to={link.href} className='d-block mb-2'>
                   {link.title}
-                </a>
+                </Link>
               ))}
             </div>
           ))}
