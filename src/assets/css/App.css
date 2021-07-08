@@ -13,16 +13,13 @@
   }
 }
  
-body {
-   background: rgb(230, 228, 228);
- }
 
 body, #navbarText, .navbar a {
   font-family: 'Montserrat', sans-serif;
 }
 
 footer {
-  border-top: lightgrey 0.5px solid;
+  border-top: rgba(209, 208, 208, 0.5) 0.5px solid;
   padding-top: 20px;
   padding-bottom: 30px;
   margin-top: 40px;
@@ -30,12 +27,12 @@ footer {
 
 footer a {
   text-decoration: none;
-  color: gray;
+  color: rgba(209, 208, 208, 0.5);
   font-size: small;
 }
 
 footer a:hover {
-  color: black;
+  color: white;
   width: fit-content;
 }
 
@@ -91,14 +88,10 @@ nav {
   position: absolute;
   top: 57%;
   left: 0%;
-  /* padding-left: 30px;
-  padding-right: 30px; */
-
 }
 
 .carousel-caption h1 {
   font-weight: 500;
-  /* color: white; */
 }
 
 
@@ -115,6 +108,8 @@ nav {
   height: 270px;
   width: 190px;
   border-radius: 5px;
+  border: none;
+  box-shadow: 0px 0px 15px rgba(173, 173, 173, 0.63);
   overflow: hidden;
 }
 

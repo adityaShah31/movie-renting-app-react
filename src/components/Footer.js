@@ -49,7 +49,7 @@ const Footer = () => {
         <div className='row'>
           {footerLinks.map((section) => (
             <div key={section.heading} className='col-6 col-md-3'>
-              <h5 className='mb-3 mt-2'>{section.heading}</h5>
+              <h5 className='mb-3 mt-2 text-white'>{section.heading}</h5>
               {section.links.map((link) => (
                 <Link key={link.title} to={link.href} className='d-block mb-2'>
                   {link.title}

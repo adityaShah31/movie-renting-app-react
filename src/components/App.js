@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import fs from 'fs';
 
 import HomePage from '../pages/HomePage';
 import ListingPage from '../pages/ListingPage';
@@ -8,16 +7,20 @@ import ListingPage from '../pages/ListingPage';
 import videoContext from '../context/VideoContext';
 
 import '../assets/css/App.css';
+import videoDb from '../data/videoDb.json';
 
 function App() {
   const [videos, setVideos] = useState([]);
 
   useEffect(() => {
     //Call from fake API(s)
-    fetch('http://localhost:8080/videos')
-      .then((res) => res.json())
-      .then((json) => setVideos(json))
-      .catch((err) => console.log(err));
+    //   fetch('/data/db.json')
+    //     //   fetch('http://localhost:3000/videos')
+    //     .then((res) => res.json())
+    //     .then((json) => setVideos(json))
+    //     .catch((err) => console.log(err));
+
+    setVideos(videoDb.videos);
   }, []);
 
   return (
