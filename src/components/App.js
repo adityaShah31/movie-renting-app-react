@@ -26,7 +26,7 @@ function App() {
   return (
     <Router>
       <Switch>
-        <videoContext.Provider value={{ videos, setVideos }}>
+        <videoContext.Provider value={{ videos }}>
           <Route exact path='/'>
             <HomePage />
           </Route>

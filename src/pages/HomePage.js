@@ -8,7 +8,7 @@ import HeroCarousel from '../components/HeroCarousel';
 import FeaturedVideos from '../components/FeaturedVideos';
 
 const HomePage = () => {
-  const { videos, setVideos } = useContext(videoContext);
+  const { videos } = useContext(videoContext);
 
   const featuredMovies = [];
   const featuredShows = [];
