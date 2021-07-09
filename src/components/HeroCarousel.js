@@ -3,7 +3,7 @@ import { useContext } from 'react';
 import videoContext from '../context/VideoContext';
 
 const HeroCarousel = () => {
-  const { videos, setVideos } = useContext(videoContext);
+  const { videos } = useContext(videoContext);
 
   let inDemandVideos = videos.filter((video) => video.inDemand);
 
