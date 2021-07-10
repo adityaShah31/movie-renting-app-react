@@ -9,7 +9,6 @@ import LoginRegisterModal from './LoginRegisterModal';
 import videoContext from '../context/VideoContext';
 
 import '../assets/css/App.css';
-import videoDb from '../data/videoDb.json';
 
 function App() {
   const [videos, setVideos] = useState([]);
@@ -20,8 +19,6 @@ function App() {
       .then((res) => res.json())
       .then((json) => setVideos(json))
       .catch((err) => console.log(err));
-
-    // setVideos(videoDb.videos);
   }, []);
 
   return (
