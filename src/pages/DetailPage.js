@@ -29,8 +29,6 @@ const DetailPage = () => {
   });
 
   let { id } = useParams();
-  console.log(id);
-  console.log(video);
 
   useEffect(() => {
     fetch(`http://localhost:3000/videos/${id}`)
@@ -61,8 +59,10 @@ const DetailPage = () => {
                     <p className='text-white ratingIMDb mb-0'>{video.IMDbRating}</p>
 
                     <div className='d-flex ms-5 align-items-center'>
-                      {video.genres.map((genre) => (
-                        <div className='imdbIcon genreIcon me-2'>{genre}</div>
+                      {video.genres.map((genre, index) => (
+                        <div key={index} className='imdbIcon genreIcon me-2'>
+                          {genre}
+                        </div>
                       ))}
                     </div>
                   </div>

@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import HomePage from '../pages/HomePage';
 import ListingPage from '../pages/ListingPage';
 import DetailPage from '../pages/DetailPage';
+import LoginRegisterModal from './LoginRegisterModal';
 
 import videoContext from '../context/VideoContext';
 
@@ -27,6 +28,7 @@ function App() {
     <Router>
       <Switch>
         <videoContext.Provider value={{ videos }}>
+          <LoginRegisterModal />
           <Route path='/listing'>
             <ListingPage />
           </Route>

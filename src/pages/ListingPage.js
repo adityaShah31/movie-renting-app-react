@@ -1,5 +1,4 @@
 import React, { useContext, useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
 
 import videoContext from '../context/VideoContext';
 
@@ -17,8 +16,15 @@ const ListingPage = () => {
   const setListingData = (url) => {
     fetch(url)
       .then((res) => res.json())
-      .then((json) => setListing(json))
+      .then((json) => {
+        shuffleList(json);
+        setListing(json);
+      })
       .catch((err) => console.log(err));
+  };
+
+  const shuffleList = (list) => {
+    list.sort(() => Math.random() - 0.5);
   };
 
   useEffect(() => {

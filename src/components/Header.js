@@ -28,7 +28,7 @@ const Header = () => {
             <ul className='nav navbar-nav navbar-right'>
               <li className='nav-item'>
                 <i className='fas fa-user fa-lg'></i>
-                <Link className='nav-link d-inline ms-1' to='/login'>
+                <Link className='nav-link d-inline ms-1' to='#loginModal' data-bs-toggle='modal'>
                   Login/Register
                 </Link>
               </li>
