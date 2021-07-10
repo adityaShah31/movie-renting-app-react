@@ -6,6 +6,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import HeroCarousel from '../components/HeroCarousel';
 import FeaturedVideos from '../components/FeaturedVideos';
+import ContentBlock from '../components/ContentBlock';
 
 const HomePage = () => {
   const { videos } = useContext(videoContext);
@@ -25,6 +26,7 @@ const HomePage = () => {
       <HeroCarousel />
       <FeaturedVideos title='Featured Movies' featuredVideos={featuredMovies.slice(0, 12)} />
       <FeaturedVideos title='Featured TV Shows' featuredVideos={featuredShows.slice(0, 12)} />
+      <ContentBlock />
       <Footer />
     </div>
   );
