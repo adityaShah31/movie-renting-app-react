@@ -27,7 +27,7 @@ const DetailPage = () => {
   let { id } = useParams();
 
   useEffect(() => {
-    fetch(`/api/videos/${id}`)
+    fetch(`http://localhost:3000/api/videos/${id}`)
       .then((res) => res.json())
       .then((json) => setVideo(json))
       .catch((err) => console.log(err));
