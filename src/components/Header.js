@@ -20,20 +20,15 @@ const Header = () => {
                 </Link>
               </li>
               <li className='nav-item'>
-                <Link className='nav-link' to='/movies'>
-                  Movies
-                </Link>
-              </li>
-              <li className='nav-item'>
-                <Link className='nav-link' to='/tv-shows'>
-                  TV Shows
+                <Link className='nav-link' to='/listing'>
+                  Listing
                 </Link>
               </li>
             </ul>
             <ul className='nav navbar-nav navbar-right'>
               <li className='nav-item'>
                 <i className='fas fa-user fa-lg'></i>
-                <Link className='nav-link d-inline ms-1' to='/login'>
+                <Link className='nav-link d-inline ms-1' to='#loginModal' data-bs-toggle='modal'>
                   Login/Register
                 </Link>
               </li>

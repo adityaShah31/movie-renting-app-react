@@ -7,7 +7,7 @@ const SegmentedControl = (props) => {
   };
 
   return (
-    <div className='container px-0 mt-5 segmentControl d-flex justify-content-center align-items-center'>
+    <div className='container px-0 mt-4 segmentControl d-flex justify-content-center align-items-center'>
       <div className='radioBtn ms-auto'>
         <input type='radio' id='allRadio' name='videoFilter' value='all' defaultChecked onChange={handleFilterChange} />
         <label htmlFor='allRadio'>All</label>

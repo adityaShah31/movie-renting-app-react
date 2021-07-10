@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import HomePage from '../pages/HomePage';
 import ListingPage from '../pages/ListingPage';
+import DetailPage from '../pages/DetailPage';
+import LoginRegisterModal from './LoginRegisterModal';
 
 import videoContext from '../context/VideoContext';
 
@@ -14,24 +16,27 @@ function App() {
 
   useEffect(() => {
     //Call from fake API(s)
-    //   fetch('/data/db.json')
-    //     //   fetch('http://localhost:3000/videos')
-    //     .then((res) => res.json())
-    //     .then((json) => setVideos(json))
-    //     .catch((err) => console.log(err));
+    fetch(`http://localhost:3000/videos`)
+      .then((res) => res.json())
+      .then((json) => setVideos(json))
+      .catch((err) => console.log(err));
 
-    setVideos(videoDb.videos);
+    // setVideos(videoDb.videos);
   }, []);
 
   return (
     <Router>
       <Switch>
         <videoContext.Provider value={{ videos }}>
-          <Route exact path='/'>
-            <HomePage />
-          </Route>
+          <LoginRegisterModal />
           <Route path='/listing'>
             <ListingPage />
+          </Route>
+          <Route path='/video/:id'>
+            <DetailPage />
+          </Route>
+          <Route exact path='/'>
+            <HomePage />
           </Route>
         </videoContext.Provider>
       </Switch>

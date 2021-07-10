@@ -13,24 +13,44 @@ const ListingPage = () => {
   const [listingVideos, setListing] = useState([videos]);
   const [title, setTitle] = useState('');
 
+  const setListingData = (url) => {
+    fetch(url)
+      .then((res) => res.json())
+      .then((json) => {
+        shuffleList(json);
+        setListing(json);
+      })
+      .catch((err) => console.log(err));
+  };
+
+  const shuffleList = (list) => {
+    list.sort(() => Math.random() - 0.5);
+  };
+
   useEffect(() => {
     setTitle('All');
-    setListing(videos);
+
+    setListingData('http://localhost:3000/videos');
+
+    // setListing(videos);
   }, []);
 
   const filterVideos = (filter) => {
     if (filter === 'movies') {
-      const movies = videos.filter((video) => video.type === 'movie');
+      // const movies = videos.filter((video) => video.type === 'movie');
+      // setListing(movies);
       setTitle('Movies');
-      setListing(movies);
+      setListingData('http://localhost:3000/videos?type=movie');
     } else if (filter === 'tv-shows') {
-      const tvShows = videos.filter((video) => video.type === 'tv-show');
+      // const tvShows = videos.filter((video) => video.type === 'tv-show');
+      // setListing(tvShows);
       setTitle('TV Shows');
-      setListing(tvShows);
+      setListingData('http://localhost:3000/videos?type=tv-show');
     } else {
-      const allVideos = [...videos];
+      // const allVideos = [...videos];
+      // setListing(allVideos);
       setTitle('All');
-      setListing(allVideos);
+      setListingData('http://localhost:3000/videos');
     }
   };
 
