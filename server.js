@@ -1,6 +1,6 @@
-import jsonServer from 'json-server';
-import express from 'express';
-import path from 'path';
+const jsonServer = require('json-server');
+const express = require('express');
+const path = require('path');
 
 const server = jsonServer.create();
 const router = jsonServer.router('db.json');
