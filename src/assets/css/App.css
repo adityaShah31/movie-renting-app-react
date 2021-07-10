@@ -60,7 +60,11 @@ nav {
     padding-right: 10px;
     border-radius: 3px;
 }
-
+@media screen and (min-width: 600px) {
+  .navbar-collapse {
+    border-bottom: none;
+;  }
+}
 /* Home Page */
 .carousel-caption {
   text-align: justify;
