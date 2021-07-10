@@ -29,19 +29,19 @@ const ListingPage = () => {
 
   useEffect(() => {
     setTitle('All');
-    setListingData('http://localhost:3000/videos');
+    setListingData('/api/videos');
   }, []);
 
   const filterVideos = (filter) => {
     if (filter === 'movies') {
       setTitle('Movies');
-      setListingData('http://localhost:3000/videos?type=movie');
+      setListingData('/api/videos?type=movie');
     } else if (filter === 'tv-shows') {
       setTitle('TV Shows');
-      setListingData('http://localhost:3000/videos?type=tv-show');
+      setListingData('/api/videos?type=tv-show');
     } else {
       setTitle('All');
-      setListingData('http://localhost:3000/videos');
+      setListingData('/api/videos');
     }
   };
 
