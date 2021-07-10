@@ -14,7 +14,7 @@ const ListingPage = () => {
   const [title, setTitle] = useState('');
 
   const setListingData = (url) => {
-    fetch(`http://localhost:3000/api${url}`)
+    fetch(`/api${url}`)
       .then((res) => res.json())
       .then((json) => {
         shuffleList(json);
