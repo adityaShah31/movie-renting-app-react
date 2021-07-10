@@ -14,7 +14,7 @@ const ListingPage = () => {
   const [title, setTitle] = useState('');
 
   const setListingData = (url) => {
-    fetch(url)
+    fetch(`http://localhost:3000/api${url}`)
       .then((res) => res.json())
       .then((json) => {
         shuffleList(json);
@@ -29,19 +29,19 @@ const ListingPage = () => {
 
   useEffect(() => {
     setTitle('All');
-    setListingData('http://localhost:3000/videos');
+    setListingData('/videos');
   }, []);
 
   const filterVideos = (filter) => {
     if (filter === 'movies') {
       setTitle('Movies');
-      setListingData('http://localhost:3000/videos?type=movie');
+      setListingData('/videos?type=movie');
     } else if (filter === 'tv-shows') {
       setTitle('TV Shows');
-      setListingData('http://localhost:3000/videos?type=tv-show');
+      setListingData('/videos?type=tv-show');
     } else {
       setTitle('All');
-      setListingData('http://localhost:3000/videos');
+      setListingData('/videos');
     }
   };
 
