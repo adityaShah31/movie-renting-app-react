@@ -1,14 +1,10 @@
-import React, { useContext, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-
-import videoContext from '../context/VideoContext';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 const DetailPage = () => {
-  // const { videos } = useContext(videoContext);
-
   const [video, setVideo] = useState({
     id: -1,
     title: '',
@@ -35,9 +31,6 @@ const DetailPage = () => {
       .then((res) => res.json())
       .then((json) => setVideo(json))
       .catch((err) => console.log(err));
-
-    // const result = videos.find((video) => video.id === Number(id));
-    // setVideo(result);
   }, []);
 
   return (

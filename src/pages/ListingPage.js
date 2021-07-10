@@ -29,26 +29,17 @@ const ListingPage = () => {
 
   useEffect(() => {
     setTitle('All');
-
     setListingData('http://localhost:3000/videos');
-
-    // setListing(videos);
   }, []);
 
   const filterVideos = (filter) => {
     if (filter === 'movies') {
-      // const movies = videos.filter((video) => video.type === 'movie');
-      // setListing(movies);
       setTitle('Movies');
       setListingData('http://localhost:3000/videos?type=movie');
     } else if (filter === 'tv-shows') {
-      // const tvShows = videos.filter((video) => video.type === 'tv-show');
-      // setListing(tvShows);
       setTitle('TV Shows');
       setListingData('http://localhost:3000/videos?type=tv-show');
     } else {
-      // const allVideos = [...videos];
-      // setListing(allVideos);
       setTitle('All');
       setListingData('http://localhost:3000/videos');
     }
