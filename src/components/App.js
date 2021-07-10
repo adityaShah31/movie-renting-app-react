@@ -15,7 +15,7 @@ function App() {
 
   useEffect(() => {
     //Call from fake API(s)
-    fetch(`/api/videos`)
+    fetch(`http://localhost:3000/api/videos`)
       .then((res) => res.json())
       .then((json) => setVideos(json))
       .catch((err) => console.log(err));
