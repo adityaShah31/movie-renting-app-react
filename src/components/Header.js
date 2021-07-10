@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -7,7 +7,7 @@ const Header = () => {
       <nav className='p-0 navbar navbar-expand-lg navbar-dark bg-dark'>
         <div className='container-fluid'>
           <Link className='navbar-brand' to='/'>
-            <img src='/images/logo.png' alt='' srcSet='' />
+            <img src='/images/logo.png' alt='Logo' srcSet='' />
           </Link>
           <button className='navbar-toggler' type='button' data-bs-toggle='collapse' data-bs-target='#navbarText' aria-controls='navbarText' aria-expanded='false' aria-label='Toggle navigation'>
             <span className='navbar-toggler-icon'></span>
@@ -15,14 +15,28 @@ const Header = () => {
           <div className='collapse navbar-collapse' id='navbarText'>
             <ul className='navbar-nav me-auto mb-2 mb-lg-0'>
               <li className='nav-item'>
-                <Link className='nav-link active' aria-current='page' to='/'>
+                <NavLink
+                  className='nav-link active'
+                  aria-current='page'
+                  exact
+                  to='/'
+                  activeStyle={{
+                    color: 'white',
+                  }}
+                >
                   Home
-                </Link>
+                </NavLink>
               </li>
               <li className='nav-item'>
-                <Link className='nav-link' to='/listing'>
+                <NavLink
+                  className='nav-link'
+                  to='/listing'
+                  activeStyle={{
+                    color: 'white',
+                  }}
+                >
                   Listing
-                </Link>
+                </NavLink>
               </li>
             </ul>
             <ul className='nav navbar-nav navbar-right'>

@@ -6,7 +6,7 @@ import VideoCard from './VideoCard';
 const FeaturedVideos = (props) => {
   return (
     <div className='w-100 ms-3 me-0 mt-4'>
-      <div className='container featuredVidTopContainer text-white px-2 mb-3 mx-0 d-flex justify-content-between w-100'>
+      <div className='container featuredVidTopContainer text-white px-2 mb-3 mx-1 d-flex justify-content-between'>
         <h4>{props.title}</h4>
         <Link to='/listing' className={props.hideButton ? 'd-none viewDetailBtn btn btn-dark' : 'viewDetailBtn btn btn-dark'}>
           View All

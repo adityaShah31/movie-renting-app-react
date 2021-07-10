@@ -83,6 +83,10 @@ nav {
   height: auto;
 }
 
+.carousel-item {
+  position: relative;
+}
+
 .carousel-caption {
   position: absolute;
   top: 57%;
@@ -102,6 +106,10 @@ nav {
   -webkit-box-orient: vertical;
 }
 
+.featuredVidTopContainer {
+  max-width: 97%;
+}
+
 .viewDetailBtn {
   padding: 5px 30px;
   border-radius: 50px;
@@ -111,6 +119,15 @@ nav {
   background: rgba(27, 172,192, 1);
 }
 
+.staticContentContainer img {
+  min-width: 30vw;
+  max-width: 30vw;
+  width: 30vw;
+  height: auto;
+  border-radius: 1px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
 
 /* Video card animation */
 .featuredVideoCard {
