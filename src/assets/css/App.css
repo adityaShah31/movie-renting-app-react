@@ -88,7 +88,7 @@ nav {
 }
 
 .bannerImgContainer {
-  height: 75vh;
+  max-height: 75vh;
 }
 
 .bannerImgContainer img {
@@ -133,7 +133,7 @@ nav {
 }
 
 .staticContentContainer img {
-  min-width: 30vw;
+  min-width: 300px;
   max-width: 30vw;
   width: 30vw;
   height: auto;
@@ -158,6 +158,25 @@ nav {
   box-shadow: 0px 0px 7px rgba(173, 173, 173, 0.63);
   overflow: hidden;
 }
+
+@media only screen and (max-width: 600px) {
+  .featuredVideoCard {
+    max-width: 126px;
+    max-height: 180px;
+    
+    min-width: 84px;
+    min-height: 120px;
+  
+    width: 100%;
+    height: auto;
+  
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 0px 7px rgba(173, 173, 173, 0.63);
+    overflow: hidden;
+  }
+}
+
 
 .cardImgPoster {
   width: 100%;
