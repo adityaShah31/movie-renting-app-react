@@ -17,7 +17,7 @@ const DetailPage = () => {
     type: '',
     rent: '',
     buy: '',
-    IMDbRating: '',
+    imdbRating: '',
     actors: [],
     director: '',
     inDemand: false,
@@ -27,9 +27,9 @@ const DetailPage = () => {
   let { id } = useParams();
 
   useEffect(() => {
-    fetch(`/api/videos/${id}`)
+    fetch(`https://f-movies-backend.herokuapp.com/videos/${id}`)
       .then((res) => res.json())
-      .then((json) => setVideo(json))
+      .then((json) => setVideo(json.data))
       .catch((err) => console.log(err));
   }, []);
 
@@ -49,7 +49,7 @@ const DetailPage = () => {
                   <h1 className='text-white d-inline me-5'>{video.title}</h1>
                   <div className='d-flex mt-2'>
                     <div className='imdbIcon me-2'>IMDb</div>
-                    <p className='text-white ratingIMDb mb-0'>{video.IMDbRating}</p>
+                    <p className='text-white ratingIMDb mb-0'>{video.imdbRating}</p>
 
                     <div className='d-flex ms-5 align-items-center'>
                       {video.genres.map((genre, index) => (

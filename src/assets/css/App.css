@@ -60,10 +60,27 @@ nav {
     padding-right: 10px;
     border-radius: 3px;
 }
+
+.search-input {
+  border: none;
+  border-radius: 30px;
+  padding-left: 20px;
+}
+
+.search-btn {
+  padding-top: 5px;
+  padding-bottom: 5px;
+ border-radius: 100px;
+}
+
+.search-btn:hover {
+  background: rgba(27, 172,192, 1);
+}
+
 @media screen and (min-width: 600px) {
   .navbar-collapse {
     border-bottom: none;
-;  }
+    }
 }
 /* Home Page */
 .carousel-caption {
