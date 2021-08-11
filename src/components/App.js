@@ -9,15 +9,16 @@ import LoginRegisterModal from './LoginRegisterModal';
 import videoContext from '../context/VideoContext';
 
 import '../assets/css/App.css';
+import DashboardPage from '../pages/DashboardPage';
+import SearchResultsPage from '../pages/SearchResultsPage';
 
 function App() {
   const [videos, setVideos] = useState([]);
 
   useEffect(() => {
-    //Call from fake API(s)
-    fetch(`/api/videos`)
+    fetch(`https://f-movies-backend.herokuapp.com/videos/`)
       .then((res) => res.json())
-      .then((json) => setVideos(json))
+      .then((json) => setVideos(json.data))
       .catch((err) => console.log(err));
   }, []);
 
@@ -34,6 +35,12 @@ function App() {
           </Route>
           <Route exact path='/'>
             <HomePage />
+          </Route>
+          <Route exact path='/user/dashboard'>
+            <DashboardPage />
+          </Route>
+          <Route exact path='/videos/search'>
+            <SearchResultsPage />
           </Route>
         </videoContext.Provider>
       </Switch>

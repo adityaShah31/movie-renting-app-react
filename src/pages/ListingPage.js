@@ -14,11 +14,11 @@ const ListingPage = () => {
   const [title, setTitle] = useState('');
 
   const setListingData = (url) => {
-    fetch(`/api${url}`)
+    fetch(`https://f-movies-backend.herokuapp.com${url}`)
       .then((res) => res.json())
       .then((json) => {
-        shuffleList(json);
-        setListing(json);
+        shuffleList(json.data);
+        setListing(json.data);
       })
       .catch((err) => console.log(err));
   };
@@ -29,19 +29,19 @@ const ListingPage = () => {
 
   useEffect(() => {
     setTitle('All');
-    setListingData('/videos');
+    setListingData('/videos/');
   }, []);
 
   const filterVideos = (filter) => {
     if (filter === 'movies') {
       setTitle('Movies');
-      setListingData('/videos?type=movie');
+      setListingData('/videos/movies');
     } else if (filter === 'tv-shows') {
       setTitle('TV Shows');
-      setListingData('/videos?type=tv-show');
+      setListingData('/videos/tv-shows');
     } else {
       setTitle('All');
-      setListingData('/videos');
+      setListingData('/videos/');
     }
   };
 
